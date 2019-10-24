@@ -1,0 +1,83 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+
+block content
+
+	//begin main
+	.main
+
+		//begin screen
+
+		+b.SECTION.screen.section._screen.noise-bg#screen
+			.section__line.section__line_l
+			.section__line.section__line_c
+			.section__line.section__line_r
+			+e.slider-controls-wrap.container
+				+e.slider-controls.slider-controls._gray
+			+e.slider.slider.js-screen-slider
+				+e.slider-item
+					+e.bg(style='background-image: url(img/bg/screen-sld_bg-1.jpg)')
+						+e.container.container
+								+e.content
+									+b.section-title._left._white._lg.screen__content-title
+										+e.inner
+											+e.I.icon.ocon-R
+											+e.H2.text._lg
+												| РЕАЛЬНАЯ ЗАЩИТА ОТ УГОНА?&nbsp;
+												span —&nbsp; ДА!
+									+e.P.content-descr Удобство. Экономия. Эффeктивность
+									+e.content-bot
+										+e.content-price
+											+e.SPAN.content-price-text от
+											+b.price-block._white.screen__price-block
+												+e.current
+													span 10 000
+														= ' '
+														i ₽
+										+btn({
+											type: 'b',
+											text: 'Заказать звонок',
+											classMod: '_red screen__content-btn',
+											popup: 'call-popup'
+										})
+								+e.img-wrap
+									+e.IMG(src="img/bg/screen-sld_img-1.png" alt="image")
+				+e.slider-item
+					+e.bg(style='background-image: url(img/bg/screen-sld_bg-1.jpg)')
+						+e.container.container
+								+e.content
+									+b.section-title._left._white._lg.screen__content-title
+										+e.inner
+											+e.I.icon.ocon-R
+											+e.H2.text._lg
+												| АВТОМАТИЧЕСКИЙ ЗАПУСК ДВИГАТЕЛЯ?&nbsp;
+												span —&nbsp; ДА!
+									+e.P.content-descr Расчетливость. Продуктивность. Комфорт
+									+e.content-bot
+										+e.content-price
+											+e.SPAN.content-price-text от
+											+b.price-block._white.screen__price-block
+												+e.current
+													span 10 000
+														= ' '
+														i ₽
+										+btn({
+											type: 'b',
+											text: 'Заказать звонок',
+											classMod: '_red screen__content-btn',
+											popup: 'call-popup'
+										})
+								+e.img-wrap
+									+e.IMG(src="img/bg/screen-sld_img-2.png" alt="image")
+			+b.BUTTON.scroll-next-btn.js-scroll-to: +i('angle-down')
+			+arcDecor('1')
+	
+				
+
+
+
+		
+							
+

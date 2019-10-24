@@ -1,0 +1,115 @@
+// begin contact block 
+.contact-block
+    $parent: &
+    font-size: 0
+    letter-spacing: 0
+    &_extended
+        display: flex
+        justify-content: space-between
+        padding-right: 8px
+        +xs
+            flex-direction: column
+    &__item
+        display: inline-flex
+        color: $color2
+        font-size: 16px
+        #{$parent}_default &
+            align-items: center
+        #{$parent}_extended &
+            width: 250px
+            align-items: flex-start
+            +xs
+                width: 100%
+        &:not(:last-child)
+            #{$parent}_extended &
+                +xs
+                    margin-bottom: 15px
+            #{$parent}_default &
+                margin-right: 57px
+                +sm
+                    margin-right: 35px
+        address
+            font-style: normal
+        a
+            transition: .3s ease-in-out
+            &:hover
+                color: $color1
+        p
+            color: $color5
+        &-text
+        &-title
+            +f('ub500',14)
+        &-icon
+            position: relative
+            +flexCenter
+            margin-right: 20px
+            width: 26px
+            height: 26px
+            border: 1px solid #e6e6e6
+            font-size: 11px
+            #{$parent}_extended &
+                margin-right: 15px
+            &::after,  &::before
+                position: absolute
+                top: 50%
+                z-index: 1
+                margin-top: -3px
+                width: 1px
+                height: 6px
+                background-color: $color1
+                content: ""
+            &::before
+                left: -1px
+            &::after
+                right: -1px
+            .icon-phone
+                transform: scaleX(-1)
+
+
+// *** begin scroll-next-btn *** //
+.scroll-next-btn
+   position: absolute
+   left: calc(50% - 58px)
+   bottom: -8px
+   width: 108px
+   z-index: 5
+   +flexCenter
+   border-radius: 50%
+   pointer-events: none
+   +xs
+      display: none
+   &:hover
+      svg
+         animation: smallMoveDown .3s .3s ease-in-out
+      &::before
+         background-color: lighten($color1, 10)
+         box-shadow: none
+   &::after, &::before
+      +vcenter
+      background: $white
+      border-radius: 50%
+      content: ''
+   &::before
+      margin-top: -8px
+      pointer-events: auto
+      z-index: 1
+      width: 45px
+      height: 45px
+      box-shadow: 0 15px 40px rgba(26, 3, 4, 0.2), 0 0 48px 3px rgba(240, 67, 79, 0.2)
+      background-color: $color1
+      transition: .3s ease-in-out
+   &::after
+      width: 100px
+      height: 108px
+   
+   svg
+      position: relative
+      top: -6px
+      z-index: 3
+      font-size: 16px
+      fill: $white
+   .is-ie &
+      width: 108px
+      height: 108px
+      bottom: -26px
+      z-index: 5
