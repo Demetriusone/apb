@@ -22,6 +22,7 @@ class Slider {
 
     const iconLeft = svgIcon('angle-left');
     const iconRight = svgIcon('angle-right');
+    
 
     this.defaultOptions = {
       slidesToShow: this.showCount,

@@ -1,22 +1,19 @@
-
- 
-//begin header
-+b.HEADER.header(class= headerClass)
++b.HEADER.header( class = headerClass)
 	+e.info
 		+e.info-container.container
 			+e.logo
-				+e.logo-text Center 
+				+e.logo-text Center
 					i |
 					span Dop
-			+b.contact-block._default.header__contant-block
-				+e.item
-					+e.item-icon
-						+i('map-marker-alt')
-					address г.Москва, ул. Осенняя, 23
+			+b.contact-block._default.header__contact-block
 				+e.item
 					+e.item-icon
 						+i("phone")
-					+e.A(href="tel:79650990090") +7 (965) 099 00 90
+					+e.A(href="tel:983729372") 38279732
+				+e.item
+					+e.item-icon
+						+i("phone")
+					address Москва ул.Пушкина дом 2
 			+b.BUTTON.nav-btn(type = "button")
 				+e.SPAN.burger
 					+e.SPAN.lines
@@ -24,22 +21,77 @@
 		+e.NAV.body
 			-
 				navList = [
-					['Главная','screen'],
-					['Преимущества','adventages'],
-					['FAQ','faq'],
-					['Решения','solutions'],
-					['Конфигуратор','config'],
-					['Доп.опции','equip'],
-					['Контакты','contacts'],
+					["Главная","screen"],
+					["Преимущества","advantages"],
+					["FAQ","faq"],
+					["Решения","solutions"],
+					["Конфигуратор","config"],
+					["Доп.опции","options"],
+					["Контакты","contacts"]
+					
 				]
 			+e.UL.list
 				for navLink in navList
-					+e.Li.list-item: +e.A.list-link(href=`#${navLink[1]}`)= navLink[0]
+					+e.LI.list-item: +e.A.list-link(href=`#${navLink[1]}`)= navLink[0]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- //begin header
+//- +b.HEADER.header(class= headerClass)
+//- 	+e.info
+//- 		+e.info-container.container
+//- 			+e.logo
+//- 				+e.logo-text Center 
+//- 					i |
+//- 					span Dop
+//- 			+b.contact-block._default.header__contant-block
+//- 				+e.item
+//- 					+e.item-icon
+//- 						+i('map-marker-alt')
+//- 					address г.Москва, ул. Осенняя, 23
+//- 				+e.item
+//- 					+e.item-icon
+//- 						+i("phone")
+//- 					+e.A(href="tel:79650990090") +7 (965) 099 00 90
+//- 			+b.BUTTON.nav-btn(type = "button")
+//- 				+e.SPAN.burger
+//- 					+e.SPAN.lines
+//- 	+b.nav
+//- 		+e.NAV.body					
+//- 			-		
+//- 				navList = [
+//- 					['Главная','screen'],
+//- 					['Преимущества','adventages'],
+//- 					['FAQ','faq'],
+//- 					['Решения','solutions'],
+//- 					['Конфигуратор','config'],
+//- 					['Доп.опции','equip'],
+//- 					['Контакты','contacts'],
+//- 				]
+//- 			+e.UL.list
+//- 				for navLink in navList
+//- 					+e.LI.list-item: +e.A.list-link(href=`#${navLink[1]}`)= navLink[0]
 
 	
 
 
 					
 
-// end header
+//- // end header
 

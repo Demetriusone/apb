@@ -113,3 +113,27 @@
       height: 108px
       bottom: -26px
       z-index: 5
+
+///* end scroll btn *///
+
+///** list triangled * ///
+.list-triangled
+    li
+        font-size: 0
+        &:not(:last-child)
+            margin-bottom: 12px
+        &::before
+            display: inline-block
+            vertical-align: middle
+            margin-right: 7px
+            @include arr(4,4, $color1, r)
+            content: ""
+        span,strong
+            display: inline
+            vertical-align: middle
+            font-size: 16px
+            line-height: 22px
+        strong
+            margin-right: 4px
+/** end list triangled *///
+            

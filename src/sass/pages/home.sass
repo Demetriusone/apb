@@ -94,3 +94,134 @@
    &__price-block
       font-size: 36px
 // end screen //
+
+// begin advantages
+
+.advantages
+   padding: 109px 0 150px
+   &__container
+      +md
+         max-width: 810px
+   &__title
+      margin-bottom: 75px
+      span
+         margin-left: 10px
+   &__row
+      +md
+         flex-wrap: wrap
+      +xs
+         flex-direction: column
+         align-items: center
+         margin: 0
+   &__item
+      $parent: &
+      position: relative
+      flex: 0 1 calc( 25% - 30px)
+      width: calc( 25% - 30px)
+      margin: 0 15px
+      padding: 32px 33px 27px 27px
+      min-height: 241px
+      background-color: $white
+      cursor: pointer
+      +md
+         flex: 0 1 calc(50% - 30px)
+         width: calc(50% - 30px)
+      +xs
+         flex: 1 1 auto
+         width: 100%
+      .is-ie &
+         max-width: 262px
+      &:nth-child(1) ~ &
+         +xs
+            margin: 30px 15px 0
+      &:nth-child(2) ~ &
+         +md
+            margin: 30px 15px 0 
+      &-decor
+         +coverdiv
+         box-shadow: 0 15px 40px rgba(26, 3, 4, 0.1)
+         border: 1px solid #f7f7f7
+         transition: .3s ease-in-out
+         pointer-events: none
+         #{$parent}:hover &
+            opacity: .5
+         &::before, &::after
+            position: absolute
+            width: 15px
+            height: 15px
+            content: ""
+         &::before 
+            top: -2px
+            left: -2px
+            border-top: 2px solid $color1
+            border-left: 2px solid $color1
+         &::after
+            right: -2px
+            bottom: -2px
+            border-right: 2px solid $color1
+            border-bottom: 2px solid $color1
+      &-top
+         display: flex
+         align-items: center 
+         justify-content: center 
+         margin-bottom: 16px
+      &-title
+         flex: 0 1 calc( 100% - 50px )
+      &-icon
+         height: 34px            
+// end advantages //
+// begin faq // 
+.faq
+   padding: 110px 175px
+   &__title
+      margin-bottom: 80px
+      +xs
+         margin-bottom: 50px
+   &__row
+      flex-wrap: wrap
+      counter-reset: faqCount
+      +xs
+         flex-direction: column
+   &__item 
+      flex: 0 1 50%
+      width: 50%
+      padding: 0 15px
+      counter-increment: faqCount
+      +xs
+         flex: 0 1 auto
+         width: 100%
+      &:nth-child(2) ~ &
+         padding: 78px 15px 0
+      .is-ie &
+         max-width: 585px
+      &-inner
+         position: relative
+         padding-left: 80px
+         +sm
+            padding-left: 50px
+         &::before
+            position: absolute
+            left: 8px
+            bottom: -3px
+            z-index: 1
+            color: $white 
+            opacity: 0.02
+            +f('ub300', 54,54) content: counter(faqCount,decimal-leading-zero)
+      &-title
+         position: relative
+         margin-bottom: 8px
+         &::before
+            position: absolute
+            top: calc(50% - 1px)
+            right: calc(100% + 15px)
+            width: 55px
+            height: 2px
+            background-color: $color1
+            content: ""
+            +sm
+               width: 30px
+      p
+         color: $color6
+         font-size: 14px
+         line-height: 22px
+// end faq //
